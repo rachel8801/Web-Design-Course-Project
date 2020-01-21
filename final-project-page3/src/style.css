@@ -1,0 +1,203 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url('https://fonts.googleapis.com/css?family=Inria+Serif&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header {
+  display: block;
+  width: 100%;
+  text-align:right;
+  position: relative;
+  background-color: rgba(0,0,0,0.8);  
+}
+/* hide checkbox and label */
+.header > input, 
+.header > label 
+{
+  display: none;
+}
+.header > .nav {
+  display: inline-block;
+  width: 100%;
+  padding: 16px;
+}
+.header > .nav > .home-page{
+  display: inline-block;
+  width: 30%;
+  text-align: left;
+  font-size: 18px;
+}
+.header > .nav > .main-menu {
+  display: inline-block;
+  width: 68%;
+  text-align: right;
+  font-size: 18px;
+}
+.header > .nav > .home-page > li, 
+.header > .nav > .main-menu > li 
+{
+  display: inline-block;
+  padding: 0 10px;
+}
+.header > .nav > .home-page > li >a, 
+.header > .nav > .main-menu > li >a
+{
+  color: white;
+  font-family: sans-serif;
+  font-size: 75%;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+.row > .column{
+  display: inline-block;
+  width: 25%;
+  height: 500px;
+  position: relative;
+  float: left;
+  padding: 50px 30px 50px 30px;
+  background-color: #CFCFCF;
+}
+.row > .column > img{
+  float: none;
+  width: 100%;
+  height: 100%;
+}
+.door-style{
+  padding-top: 30px;
+  padding-left: 25px;
+  text-align: justify;
+  font-family:'Inria Serif', serif;
+  color: #383838;
+  background-color: #CFCFCF;
+}
+
+
+.footer{
+  padding: 32px 16px;
+  background-color:rgba(0,0,0,0.8);
+  color: #C4BEBC;
+  font-family: sans-serif;
+  text-align: center;
+}
+.footer > .contact,
+.footer > .links,
+.footer > .rights{
+  display: inline-block;
+  width: 33.3%;
+  margin-right: -4px;
+  vertical-align: top;
+}
+.footer > .contact{
+  margin-bottom: 24px;
+  text-align: left;
+  padding-top: 32px;
+}
+
+.footer >.contact > a{
+  display: block;
+  margin-bottom: 16px;
+  color: #C4BEBC;
+}
+.footer > .contact > span > a{
+  color: #C4BEBC;
+  text-decoration: none;
+}
+
+.footer > .contact > span{
+  display: block;
+  
+ }
+.footer > .links > div {
+  display: inline-block;
+  width: 50%;
+  margin-right: -4px;
+  text-align: left;
+  vertical-align: top;
+}
+.footer > .links > div > a {
+  display: block;
+  text-decoration: none;
+  color:#C4BEBC;
+  font-size: 100%;
+  padding-top: 32px;
+}
+.footer > .rights {
+  padding-top: 32px;
+  text-align: right;
+}
+ .footer > .rights > p{
+  font-size: 200%;
+  padding: 8px;
+  text-align: right;
+}
+
+@media (max-width: 700px){
+  .header > #nav + label + .nav {
+    display: none;
+    width: 500px;
+    padding: 16px;    
+    background-color: lightgrey;
+  }
+  .header > #nav:checked + label + .nav {
+    display: block;
+  }
+  .header > .nav > .home-page{
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+  .header > .nav > .main-menu{
+    position: static;
+    width: 100%;
+    text-align: center;
+    background-color:grey;
+  }
+  .header > .nav > .main-menu > li{
+    display: block;  
+    border: 1px solid white;
+    border-width: 1px 0 0 0 ;
+    padding: 16px;
+      
+    }
+  .header > .nav > .main-menu > li > a {
+    font-size: 120%;
+    text-transform: capitalize;
+  }
+  .header > .nav {
+    position: absolute;
+    top: 48px;
+    right: 48px;
+    z-index: 100;
+    text-align: left;
+  }
+  .header > label {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    padding: 16px;
+    color: white;
+  }
+  .row >.column{
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .footer > .contact,
+  .footer > .links
+  {
+    width: 50%;
+    margin: 0 0 32px 0;
+    text-align: center;
+  }
+  .footer > .rights {
+    width: 100%;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+  .footer > .rights > p{
+    text-align: center;
+  }
+}
