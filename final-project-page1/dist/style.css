@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+/* reset default */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header {
+  display: block;
+  width: 100%;
+  text-align:right;
+  position: relative;
+  background-color: rgba(0,0,0,0.8);  
+}
+/* hide checkbox and label */
+.header > input, 
+.header > label 
+{
+  display: none;
+}
+.header > .nav {
+  display: inline-block;
+  width: 100%;
+  padding: 16px;
+}
+.header > .nav > .home-page{
+  display: inline-block;
+  width: 30%;
+  text-align: left;
+  font-size: 18px;
+}
+.header > .nav > .main-menu {
+  display: inline-block;
+  width: 68%;
+  text-align: right;
+  font-size: 18px;
+}
+.header > .nav > .home-page > li, 
+.header > .nav > .main-menu > li 
+{
+  display: inline-block;
+  padding: 0 10px;
+}
+.header > .nav > .home-page > li >a, 
+.header > .nav > .main-menu > li >a
+{
+  color: white;
+  font-family: sans-serif;
+  font-size: 75%;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+.slideshow {
+  display: block;
+  width: 100%;
+  height: 840px;
+  position: relative;
+  overflow: hidden;
+}
+.slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.slide > img{
+  width: 100%;
+  height: 100%;
+}
+.slideshow > input {
+  display: none;
+}
+.slideshow > input:checked + label + .slide {
+  display: block;
+}
+.slideshow > input:checked + label {
+  background-color: white;
+}
+.slide > span {
+  width: 300px;
+  position: absolute;
+  left: 60px;
+  bottom: 400px;
+  color: white;
+  font-size: 280%;
+}
+.slideshow > label {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  bottom: 140px;
+  z-index: 100;
+  background-color: lightgrey;
+}
+.slideshow > label:nth-of-type(1) {
+  left: 560px;
+}
+.slideshow > label:nth-of-type(2) {
+  left: 590px;
+  
+}
+.slideshow > label:nth-of-type(3) {
+  left: 620px;
+}
+
+.info > .info-box{
+  display: inline-block;
+  width: 50%;
+  height: 300px;
+  margin-right: -4px;
+  padding: 100px 32px 16px 16px;
+  vertical-align: top;
+  background-size: 90% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-decoration: none;
+  position: relative;
+  transition: background-size ease-in-out 1s;
+}
+.info > .info-box > span{
+  display: block;
+  margin: 20px;
+}
+.info > .info-box:nth-of-type(1){
+  background-image: url("http://jandkcabinetsphoenix.com/wp-content/uploads/2016/04/Wholesale-Espresso-Kitchen-Cabinets-Wine-Rack-in-Phoenix-with-JK.jpg");
+}
+.info > .info-box:nth-of-type(4){
+  background-image: url("https://www.cliqstudios.com/images/dayton-white-studiogray-jde4115411-105.jpg");
+}
+.info > .info-box:nth-of-type(5){
+  background-image: url("https://images.prismic.io/fabuwoodtest/992686779dffe9074672462ce7f3ea1516bb306f_trash_cans.jpg?auto&#x3D;compress,format");
+}
+.info > .info-box:hover {
+  background-size: 110%;
+  transition: background-size ease-in-out 1s;
+}
+.info > .info-box > span:first-child {
+  color: #242B2B;
+  font-size: 200%;
+  text-transform: capitalize;
+}
+.info > .info-box > span:nth-child(2) {
+  font-size: 80%;
+  font-family: sans-serif;
+  color: #454242;
+}
+
+.footer{
+  padding: 32px 16px;
+  background-color:rgba(0,0,0,0.8);
+  color: #C4BEBC;
+  font-family: sans-serif;
+  text-align: center;
+}
+.footer > .contact,
+.footer > .links,
+.footer > .rights{
+  display: inline-block;
+  width: 33.3%;
+  margin-right: -4px;
+  vertical-align: top;
+}
+.footer > .contact{
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.footer >.contact > a{
+  display: block;
+  margin-bottom: 16px;
+  color: #C4BEBC;
+}
+.footer > .contact > span > a{
+  color: #C4BEBC;
+  text-decoration: none;
+}
+
+.footer > .contact > span{
+  display: block;
+  
+ }
+.footer > .links > div {
+  display: inline-block;
+  width: 50%;
+  margin-right: -4px;
+  text-align: left;
+  vertical-align: top;
+}
+.footer > .links > div > a {
+  display: block;
+  margin: 0 0 24px 0;
+  text-decoration: none;
+  color:#C4BEBC;
+  font-size: 100%;
+}
+.footer > .rights {
+  text-align: right;
+}
+.footer > .rights > span {
+  display: block;
+  margin: 6px 0;
+  font-size: 15px;
+}
+.footer > .rights > p{
+  font-size: 200%;
+  padding: 8px;
+}
+
+
+@media (max-width: 700px){
+  .header > #nav + label + .nav {
+    display: none;
+    width: 500px;
+    padding: 16px;    
+    background-color: lightgrey;
+  }
+  .header > #nav:checked + label + .nav {
+    display: block;
+  }
+  .header > .nav > .home-page{
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+  .header > .nav > .main-menu{
+    position: static;
+    width: 100%;
+    text-align: center;
+    background-color:grey;
+  }
+  .header > .nav > .main-menu > li{
+    display: block;  
+    border: 1px solid white;
+    border-width: 1px 0 0 0 ;
+    padding: 16px;
+      
+    }
+  .header > .nav > .main-menu > li > a {
+    font-size: 120%;
+/*     font-family: sans-serif; */
+    text-transform: capitalize;
+  }
+  .header > .nav {
+    position: absolute;
+    top: 48px;
+    right: 48px;
+    z-index: 100;
+    text-align: left;
+  }
+  .header > label {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    padding: 16px;
+    color: white;
+  }
+
+  .slideshow > input:checked + label + .slide {
+    display: block;
+    width: 100%;
+    text-align:center;
+  }
+  
+  .info > .info-box,
+  .info > .info-box > span{
+    display: none;
+  }
+  
+  .footer > .contact,
+  .footer > .links
+  {
+    width: 50%;
+    margin: 0 0 32px 0;
+    text-align: center;
+  }
+  .footer > .rights {
+    width: 100%;
+    margin-bottom: 32px;
+    text-align: center;
+  }  
+  
+}
